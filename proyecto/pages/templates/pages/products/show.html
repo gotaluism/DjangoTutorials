@@ -1,0 +1,27 @@
+@extends('layouts.app') 
+
+{% extends 'pages/base.html' %} 
+
+{% block title %} {{title}} {% endblock %} 
+
+{% block header_title %} {{subtitle}} {% endblock %} 
+
+
+
+{% block content %} 
+
+<h1>{{title}}</h1>
+
+<div class="card-body text-center"> 
+    <h3>{{subtitle}}</h3>
+    
+    {% if price > 100 %}
+        <h4 style='color:red;'>{{price}} COP (Oferton) </h4>
+    {% else %}
+        <h4>{{price}} COP (Oferton)</h4>
+    {% endif %}
+    
+</div> 
+
+
+{% endblock %} 
